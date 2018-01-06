@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+
+body {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -o-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size:16px;
+}
+
+#header_wrap{
+	height: 664px;
+	width:1080px;
+	}
+
+#menu_wrap{
+	width: 1080px;
+	height:124px;
+}
+
+#contents{
+	width: 1000px;
+	margin: 0 40px;
+	clear: both;
+	overflow:hidden;
+	}
+
+
+#formArea {
+	width:90%;
+	padding:40px 2%;
+	margin:20px 3% 40px;
+}
+
+#formArea table {
+	width: 100%;
+	}
+
+#formArea table th,
+#formArea table td,
+#formArea p
+{
+	font-size:18px;
+}
+#formArea table th{
+	width: 98%;
+	padding:1em 1%;
+	}
+#formArea table,
+#formArea tr,
+#formArea thead,
+#formArea tbody,
+#formArea th,
+#formArea td{ display:block; }
+
+
+
+input[type=text], textarea, select {
+	font-size: 51px;
+	width:100%;
+}
+input[type="radio"],
+input[type="checkbox"] {
+	font-size: x-large;
+	height: 30px;
+	width: 30px;
+}
+input[type=image] {
+	height:auto;
+	width:70%;
+}
+
