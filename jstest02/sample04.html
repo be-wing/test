@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>new_file</title>
+<script type="text/javascript">
+function totalCal () {
+	//tabelの情報を取得
+	var data = document.getElementsByTagName("td");
+	//alert(data.length);
+	//alert( parseInt( data[10].innerHTML ) );
+	var total = 0;
+	for(var i = 0 ; i < data.length ; i++){
+		total += parseInt( data[i].innerHTML );
+	}
+	//表示
+	document.getElementById("totalView").innerHTML = "合計：" + total;
+}
+function aveCal(){
+	
+}
+
+function maxCal(){
+
+}
+
+function minCal(){
+
+}
+
+function sortCal(){
+
+}
+
+function sortCal2(){
+
+}
+
+function searchCal(){
+}
+
+</script>
+</head>
+
+<body>
+<table border="1">
+<tbody>
+<tr>
+<td>15</td>
+<td>72</td>
+<td>35</td>
+<td>58</td>
+<td>77</td>
+</tr>
+<tr>
+<td>89</td>
+<td>105</td>
+<td>25</td>
+<td>36</td>
+<td>78</td>
+</tr>
+<tr>
+<td>98</td>
+<td>27</td>
+<td>85</td>
+<td>49</td>
+<td>75</td>
+</tr>
+<tr>
+<td>50</td>
+<td>58</td>
+<td>73</td>
+<td>85</td>
+<td>12</td>
+</tr>
+<tr>
+<td>650</td>
+<td>658</td>
+<td>673</td>
+<td>685</td>
+<td>612</td>
+</tr>
+<tr>
+<td>150</td>
+<td>158</td>
+<td>173</td>
+<td>185</td>
+<td>112</td>
+</tr>
+</tbody>
+</table>
+<p>上記の表の各データを表示する仕組みを作りなさい</p>
+<p>完成例</p>
+<a href="javascript:;" onClick="totalCal()">合計</a>
+<div id="totalView"> </div>
+<p>問題１</p>
+<a href="javascript:;" onClick="aveCal()">平均</a>
+<div id="avelView"> </div>
+<p>問題２</p>
+<a href="javascript:;" onClick="maxCal()">最大値</a>
+<div id="maxView"> </div>
+<p>問題３</p>
+<a href="javascript:;" onClick="minCal()">最小値</a>
+<div id="minView"> </div>
+<p>問題４</p>
+<a href="javascript:;" onClick="sortCal()">ソート(昇順 1,2,3,4)</a>
+<a href="javascript:;" onClick="sortCal2()">ソート(降順 10,9,8,7)</a>
+<p>問題５</p>
+<p>入力した値よりも大きな値を、赤くする</p>
+<form name="form1">
+	<input type="text" name="number" />
+	<input type="button" value="検索" onClick="searchCal()">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="utf-8" />
+  <title>課題1、基礎</title>
+  <script type="text/javascript">
+	//.replace(正規表現,"置換文字")
+	//.match()
+	// g 全て置換
+	// (文字列|文字列|文字列)
+	// \ = option + ¥ 
+	// \s スペースの検索
+	// [字字] 文字
+	// . なにか一文字
+	// {n,m} n回以上m回以下
+	// {n} n回
+	// {n,} n回以上
+	// {}? 最小値を取得
+	// [^字字] 含まない
+	function judgment(){
+	
+	}
+	function zip(){
+	}
+	function validation(){
+	
+	}
+  </script>
+</head>
+<body>
+<h1>正規表現</h1>
+
+<h2>数字の判定</h2>
+<form name="form01">
+ <input type="text" name="inputText" />
+ <input type="button" value="送信" onclick="judgment()" />
+</form>
+<div id="judgView">結果表示</div>
+<h2>郵便番号の判定</h2>
+<form name="form02">
+ <input type="text" name="inputText" /><br>
+ 例111-1111（-を記入してください）
+ <input type="button" value="送信" onclick="zip()" />
+</form>
+<div id="judgView">結果表示</div>
+<h2>名前の入力</h2>
+<form name="form03">
+氏　　名<input type="text" name="inputName" /><br>
+フリガナ<input type="text" name="inputKana" /><br>
+<input type="button" value="送信" onclick="validation()" />
+</form>
+<div id="validatView">結果表示</div>
+
+</body>
+</html>
