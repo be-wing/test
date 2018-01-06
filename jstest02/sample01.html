@@ -7,39 +7,41 @@
 /* -- 課題01 --------------------------------------------- */
   function lesson01(){
   //初期化
-  var text=""; var view ="";
+  var text="", mes ="";
   //取得
-  
+  text = document.f01.inp01.value;
   //処理
-  
+  mes = text;
   //表示
+  document.getElementById("view01").innerHTML = mes;
 
   }
 /* -- 課題02 --------------------------------------------- */
 /* textBox　の内容を view02 に表示させなさい。 */
   function lesson02(){
   //初期化
-  var text=""; var view ="";
+  var text="", mes ="";
   //取得
-  
+  text = document.getElementById("textBox").innerHTML;
   //処理
-  
+  mes = text;
   //表示
-
+ document.getElementById("view02").innerHTML = mes;
   }
 /* -- 課題03 --------------------------------------------- 
 　北海道、東京、静岡、名古屋、大阪、福岡
 */
   function lesson03(){
   //初期化
-  var city = [];
-  var view = "";
-  //取得
+  var city = ["北海道","東京","静岡","名古屋","大阪","福岡"];
+  var mes = "";
   
   //処理
-  
+  for(var i = 0 ; i < city.length ; i++){
+    mes += city[i] + '、';
+  }
   //表示
-
+  document.getElementById("view03").innerHTML = mes;
   }
   </script>
 </head>
@@ -48,8 +50,8 @@
 <h2>フォームからの入力と表示</h2>
 <p>フォームに入力したものを　View01に表示する</p>
 <!-- 課題01 --------------------------------------------- -->
-<form name="form01">
-	<input type="text" name="inputText">
+<form name="f01">
+	<input type="text" name="inp01">
 	<input type="button" value="実行" onClick="lesson01()">
 </form>
 <div id="view01">結果表示</div>
@@ -62,7 +64,7 @@
 <!-- 課題02
 textBox　の内容を view02 に表示させなさい。
  -->
-<form name="form02">
+<form name="f02">
 	<input type="button" value="実行" onClick="lesson02()">
 </form>
 <div id="view02">結果表示</div>
@@ -87,7 +89,7 @@ cityの配列に下記の文字を値として入れなさい。
 福岡
 
 -->
-<form name="form03">
+<form name="f03">
 	<input type="button" value="実行" onClick="lesson03()">
 </form>
 <div id="view03">結果表示</div>

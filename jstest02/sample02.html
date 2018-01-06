@@ -7,35 +7,63 @@
 /* -- 課題01 --------------------------------------------- */
   function lesson01(){
   //初期化
-  
+  var num01 = 0 , num02 = 0 , total = 0;
   //取得
-  
+  num01 = parseInt( document.f01.inp01.value );
+  num02 = parseInt( document.f01.inp02.value );
   //処理
-  
+  total = num01 + num02;
   //表示
-
+  document.getElementById("ans01").innerHTML = total;
   }
 /* -- 課題02 --------------------------------------------- */
   function lesson02(){
   //初期化
-  
+  var num01 = 0 , num02 = 0 , ans = 0 , symbol = "";
   //取得
-  
+  num01 = parseInt( document.f02.inp01.value );
+  num02 = parseInt( document.f02.inp02.value );
+  symbol = document.f02.symbol.selectedIndex;
   //処理 条件分岐を使用して処理をしなさい。
-  
+  console.log(symbol);
+  switch(symbol){
+    case 0: ans = num01 + num02;  break;
+    case 1: ans = num01 - num02;  break;
+    case 2: ans = num01 / num02;  break;
+    case 3: ans = num01 * num02;  break;
+    default: ans = 'エラー'; break;
+  }
   //表示
-	 
+	 document.getElementById("ans02").innerHTML = ans;
   }
  /* -- 課題03 --------------------------------------------- */
+ /*
+ 	20歳以上　飲酒、喫煙OK
+	18歳以上　車OK
+	16歳以上　オートバイOK
+	16歳未満　自転車でがまん
+ */
   function lesson03(){
   //初期化
-  var age ="" , view=""
+  var age ="" , mes="";
   //取得
-
+  age = parseInt( document.f03.age.value );
   //処理
-
+  if(age < 0){
+    mes = "エラーです。"
+  }else if(age < 16){
+    mes = '自転車でがまん';
+  }else if(age < 18){
+    mes = 'オートバイOK';
+  }else if(age < 20){
+    mes = '車OK';
+  }else if(age < 100){
+    mes = '飲酒、喫煙OK';
+  }else{
+    mes = 'エラー';
+  }
   //表示
-
+  document.getElementById("view").innerHTML = mes;
   }
   </script>
 </head>
@@ -45,8 +73,8 @@
 <!-- 課題01 --------------------------------------------- -->
 <!-- 足し算の結果を表示しなさい　ans01に表示しなさい -->
 
-<form name="form01">
-	<input type="text" name="">＋<input type="text" name="">
+<form name="f01">
+	<input type="text" name="inp01">＋<input type="text" name="inp02">
 	<input type="button" value="結果" onClick="lesson01()">
 </form>
 <div id="ans01"></div>
@@ -54,15 +82,15 @@
 <!-- 課題02 --------------------------------------------- -->
 <!-- 計算の結果を表示しなさい　ans02に表示しなさい -->
 <h2>計算結果表示２</h2>
-<form name="form02">
-	<input type="text" name="">
+<form name="f02">
+	<input type="text" name="inp01">
 	<select name="symbol">
 		<option value="+">＋</option>
 		<option value="-">－</option>
 		<option value="/">÷</option>
 		<option value="*">×</option>
 	</select>
-	<input type="text" name="">
+	<input type="text" name="inp02">
 	<input type="button" value="実行" onClick="lesson02()">
 </form>
 <div id="ans02"></div>
@@ -78,8 +106,8 @@
 
 	入力のエラー処理があれば加点
  -->
-<form name="form03">
-	<input type="text" name="">
+<form name="f03">
+	<input type="text" name="age">
 	<input type="button" value="実行" onClick="lesson03()">
 </form>
 <div id="view"></div>
