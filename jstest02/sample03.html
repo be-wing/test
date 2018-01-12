@@ -5,16 +5,64 @@
   <title>2013115</title>
   <script type="text/javascript">
   	function judge(){
-
+			//初期化
+			var num = 0 , mes = "";
+			//取得
+			num = parseInt( document.f02.inp01.value );
+			//処理
+			if(num%2 == 0){
+				mes = "偶数です。";
+			}else{
+				mes = "奇数です。";
+			}
+			//表示
+			document.getElementById("judegView").innerHTML = mes;
+			
   	}
   	function sum(){
-
+			//初期化
+			var num = 0 , total = 0;
+			//取得
+			num = parseInt( document.f02.inp01.value );
+			//処理
+			for(var i = 1 ; i <= num ; i++){
+				total += i;
+			}
+			//表示
+			document.getElementById("sumView").innerHTML = total;
   	}
    	function sum2(){
-
+			//初期化
+			var num01 = 0 , num02 = 0, total = 0;
+			//取得
+			num01 = parseInt( document.f03.inp01.value );
+			num02 = parseInt( document.f03.inp02.value );
+			//処理
+			if(num01 > num02){
+				var temp = num01;
+				num01 = num02;
+				num02 = temp;
+			}
+			for(var i = num01 ; i <= num02 ; i++){
+				total += i;
+			}
+			//表示
+			document.getElementById("sumView2").innerHTML = total;
   	}
   	function kuku(){
-
+			//初期化
+			var num = 0 , mes ="";
+			//取得
+			num = parseInt( document.f04.inp01.value );
+			//処理
+			for(var x = 1 ; x <= num ; x++){
+				for(var y = 1 ; y <= num ; y++){
+					 mes += x*y + '、'
+				}
+				mes += '<br>';
+			}
+			//表示
+			document.getElementById("kukuView").innerHTML = mes;
   	}
   	
   </script>
@@ -24,31 +72,31 @@
 <h1>アルゴリズム3</h1>
 <div id="formView"> </div>
 <h2>問題1 入力された数値の奇数、偶数判定</h2>
-<form name="form02">
-	<input type="text" name="inputText" value="">
+<form name="f01">
+	<input type="text" name="inp01" value="">
 	<input type="button" value="実行" onclick="judge()">
 </form>
 <div id="judegView"> 奇数です。　偶数です。</div>
 <h2>問題2 1～入力された値までの合計を表示しなさい</h2>
 <p>例）入力値5 　結果：15  入力値：10 　結果:55</p>
-<form name="form03">
-	<input type="text" name="inputText" value="">
+<form name="f02">
+	<input type="text" name="inp01" value="">
 	<input type="button" value="実行" onclick="sum()">
 </form>
 <div id="sumView">合計</div>
 <h2>問題3 入力数値間の合計を表示しなさい</h2>
 <p>ただし、左右のデータが逆に入力されても問題ないようにする</p>
 <p>例 入力値 ：1、5　または　5、1　 結果　15　</p>
-<form name="form04">
-	<input type="text" name="inputText1" value="">～
-	<input type="text" name="inputText2" value="">
+<form name="f03">
+	<input type="text" name="inp01" value="">～
+	<input type="text" name="inp02" value="">
 	<input type="button" value="実行" onclick="sum2()">
 </form>
 <div id="sumView2">合計</div>
 </div>
-<h2>問題 4 九九表を作成しなさい</h2>
-<form name="form05">
-	<input type="text" name="inputText" value="">
+<h2>問題 4 入力された値に準じた、九九表を作成しなさい</h2>
+<form name="f04">
+	<input type="text" name="inp01" value="">
 	<input type="button" value="実行" onclick="kuku()">
 </form>
 <div id="kukuView">表</div>
